@@ -18,15 +18,32 @@
     <script defer src="./js/script.js"></script>
 </head>
 <body>
+
     <!-- NAVBAR -->
     <div class="navbar">
         <a class="nav-title-link" href="./index.html">
             <span class="nav-title">Future for All</span>
+            <img src="./assets/images/ffa-logo-fn-09.png" alt="Future for All Logo" class="nav-logo">
         </a>
-        <a class="button get-in-touch" href="mailto:futureforallvn@gmail.com">
-            <span class="button-text">Get in touch</span>
-        </a>
+
+        <div class="navbar-right">
+            <!-- Get in touch button -->
+            <a class="button get-in-touch" href="mailto:futureforallvn@gmail.com">
+                <span class="button-text">Get in touch</span>
+            </a>
+
+            <!-- Language Switch BELOW the button -->
+            <div class="lang-switch">
+                <a href="index.html" class="active" aria-label="English">
+                    <img src="./assets/icons/en.svg" alt="English">
+                </a>
+                <a href="index-vi.html" aria-label="Tiếng Việt">
+                    <img src="./assets/icons/vn.svg" alt="Tiếng Việt">
+                </a>
+            </div>
+        </div>
     </div>
+
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
@@ -39,15 +56,15 @@
                 <!-- Social Buttons Below Portrait -->
                 <div class="social-buttons">
                     <a class="social-btn linkedin" target="_blank" href="https://www.facebook.com/futureforallvn">
-                        <img src="./assets/icons/facebook.svg" alt="Facebook" />
+                        <img src="./assets/icons/facebook-color.svg" alt="Facebook" />
                         <span>Facebook</span>
                     </a>
                     <a class="social-btn linkedin" target="_blank" href="https://www.instagram.com/futureforall.vn/">
-                        <img src="./assets/icons/instagram.svg" alt="Instagram" />
+                        <img src="./assets/icons/instagram-color.svg" alt="Instagram" />
                         <span>Instagram</span>
                     </a>
                     <a class="social-btn linkedin" target="_blank" href="https://www.linkedin.com/company/future-for-all-de/">
-                        <img src="./assets/icons/linkedin.svg" alt="LinkedIn" />
+                        <img src="./assets/icons/linkedin-color.svg" alt="LinkedIn" />
                         <span>LinkedIn</span>
                     </a>
                 </div>
@@ -63,20 +80,20 @@
                     </div>
 
                     <div class="highlight-text">
-                    <span class="pen-highlight">Connected🌏. Compassionate❤️. Committed✨ </span> — 
-                    empowering communities, uplifting futures, creating lasting impact.
+                        <span class="pen-highlight">Connected🌏. Compassionate❤️. Committed✨ </span> — 
+                        empowering communities, uplifting futures, creating lasting impact.
                     </div>
                 </div>
 
                 <div class="button-group">
                     <a class="button" href="./assets/doc/FFA-Brochure-31122024.pdf" target="_blank">
-                    <span class="button-text">Brochure</span>
+                        <span class="button-text">Brochure</span>
                     </a>
                     <a class="button" href="./assets/doc/FFA_Q&A_20250123_ENG.pdf" target="_blank">
-                    <span class="button-text">Q&A</span>
+                        <span class="button-text">Q&A</span>
                     </a>
-                    <a class="button" id="my-work-link">
-                    <span class="button-text">Our Projects</span>
+                    <a class="button" href="#donation-section" id="donation-link">
+                        <span class="button-text">Support Our Mission</span>
                     </a>
                 </div>
             </div>
@@ -89,53 +106,81 @@
             </span>
             <div class="about-section-content">
                 <div class="body-text">
-                    Future for All is a non-profit organization established by young Vietnamese individuals (born in Vietnam and Germany) 
-                    who are studying and working in Germany, Australia, Vietnam. The organization is registered as a non-profit association 
-                    in Frankfurt, Germany (Registration number: VR 17294). With great enthusiasm and compassion, we wish to connect with our 
-                    homeland - Vietnam and contribute to community development. FFA members are young and experienced professionals with 
-                    Vietnamese heritage in various fields such as accounting, finance, social work, marketing, and communication. 
+                    <p>Future for All (FFA) is a non-profit organization founded by young Vietnamese professionals born in Vietnam and Germany, 
+                    currently studying and working in Germany, Australia, and Vietnam. Registered as a non-profit association in Frankfurt, Germany 
+                    (Registration number: VR 17294), FFA is driven by a strong desire to reconnect with our homeland and contribute to community development.</p>
 
-                    Additionally, we have many years of volunteer experience in governmental and non-governmental organizations in Vietnam 
-                    and abroad. With valuable knowledge and skills, we hope to carry out meaningful projects for sustainable society 
-                    development, particularly for disadvantaged children in Vietnam. 
+                    <p>Our members bring diverse expertise in fields such as accounting, finance, social work, marketing, and communication, alongside years of 
+                    volunteer experience with governmental and non-governmental organizations both in Vietnam and abroad. Leveraging this knowledge and experience, 
+                    FFA carries out meaningful projects aimed at building a sustainable society, with a particular focus on improving opportunities for disadvantaged 
+                    children in Vietnam.</p>
                 </div>
+            </div>
+            <div class="about-image">
+                <img src="./assets/images/ffa-logo-fn-02.png" alt="Future for All Team">
             </div>
         </div>
 
         <!-- ABOUT SECTION -->
-        <div id="about-section">
+        <div id="team-section">
             <span class="subheader-text">
-                <span class="ourteam">Our Team</span>
+                <span class="aboutme">Our Team</span>
             </span>
-            <div class="about-section-content">
-                <div class="body-text">
-                    Kim Ngan Le is currently working in the Global Finance Governance team for a pharmaceutical company in 
-                    Frankfurt, Germany. Ngan oversees many topics in Future for All, and is also one of the three board members. 
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="./assets/images/KNL-portrait.jpg" alt="Team Member" class="avatar">
+                    <div class="name">Ngan Kim Le</div>
+                    <div class="role">Program Lead · Board Member</div>
+                    <div class="description">Ngan is currently working in Global Finance Governance for a pharmaceutical company in 
+                    Frankfurt, Germany.</div>
                 </div>
-                <div class="body-text">
-                    Ha Tu Pham is currently studying MA Finance & Accounting in Frankfurt, Germany. Tu holds the role of Financial 
-                    and Accounting Manager in Future for All. Tu is one of the three board members. 
+                <div class="team-member">
+                    <img src="./assets/images/TU-portrait.jpeg" alt="Team Member" class="avatar">
+                    <div class="name">Tu Ha Pham</div>
+                    <div class="role">Financial & Accounting Manager · Board Member</div>
+                    <div class="description">Tu is currently studying MA Finance & Accounting in Frankfurt, Germany.</div>
                 </div>
-                <div class="body-text">
-                    Vy Thao Ngoc Thai is currently working in the risk management department of a bank in Frankfurt, Germany. 
-                    Vy holds the position of Donor Relationship Management in Future for All. Vy is one of the four board members.
+                <div class="team-member">
+                    <img src="./assets/images/VY-portrait.jpg" alt="Team Member" class="avatar">
+                    <div class="name">Vy Thao Ngoc Thai</div>
+                    <div class="role">Donor Relationship Management · Board Member</div>
+                    <div class="description">Vy is currently working in the risk management department of a bank in Frankfurt, Germany.</div>
                 </div>
-                <div class="body-text">
-                    Van Hong Le is currently working as a social worker in the sexual assault and family violence sectors in Australia 
-                    and holds the position of Project Manager in Future for All. 
+                <div class="team-member">
+                    <img src="./assets/images/VAN-portrait.jpeg" alt="Team Member" class="avatar">
+                    <div class="name">Van Hong Le</div>
+                    <div class="role">Project Manager</div>
+                    <div class="description">Van is currently working as a social worker in the sexual assault and family violence sectors in Australia.</div>
                 </div>
-
-                <div class="body-text">
-                    Si-Anh M. Nguyen is currently working as a social worker at a mental health service in Berlin, Germany. Si Anh holds 
-                    the position of Strategic Advisor in Future for All. 
+                <div class="team-member">
+                    <img src="./assets/images/SIANH-portrait.jpeg" alt="Team Member" class="avatar">
+                    <div class="name">Si-Anh M. Nguyen</div>
+                    <div class="role">Strategic Advisor</div>
+                    <div class="description">Si-Anh is currently working as a social worker at a mental health service in Berlin, Germany.</div>
                 </div>
-                <div class="body-text">
-                    Khue Boi promotes compassion through meaningful acts, contributing to the development of a society in which children 
-                    can access education, live in peace, and grow with the support of family and community 
+                <div class="team-member">
+                    <img src="./assets/images/KHUE-portrait.JPG" alt="Team Member" class="avatar">
+                    <div class="name">Khue Le</div>
+                    <div class="role">Project Manager</div>
+                    <div class="description">Khue currently works as Head of Human Resources at a food and beverage company based in Frankfurt, Germany.</div>
                 </div>
-                <div class="body-text">
-                    Mayday Team is a creative boutique studio based in Sai Gon, Viet Nam, that loves to provide concept design services 
-                    for brands. 
+                <div class="team-member">
+                    <img src="./assets/images/C.NGHI-portrait.jpeg" alt="Team Member" class="avatar">
+                    <div class="name">C.Nghi Le</div>
+                    <div class="role">Donor Coordinator</div>
+                    <div class="description">C. Nghi is based in Berlin, Germany.</div>
+                </div>
+                <div class="team-member">
+                    <img src="./assets/images/D.NGHI-portrait.jpeg" alt="Team Member" class="avatar">
+                    <div class="name">D.Nghi Le</div>
+                    <div class="role">Social Media Manager</div>
+                    <div class="description">D.Nghi is based in Helsinki, Finland.</div>
+                </div>
+                <div class="team-member">
+                    <img src="./assets/images/mayday logo.svg" alt="Team Member" class="avatar">
+                    <div class="name">Mayday Team</div>
+                    <div class="role">Boutique Studio</div>
+                    <div class="description">Mayday Team, based in Viet Nam, provides concept design services.</div>
                 </div>
             </div>
         </div>
@@ -143,58 +188,31 @@
         <!-- EXPERIENCE SECTION -->
         <div id="education-experience-section">
         <span class="subheader-text">
-            <span class="recent">Recent</span><br>
-            <span class="events">event</span>
+            <span class="recent">Previous</span><br>
+            <span class="adventures">Events</span>
         </span>
         <table class="info-table">
             <tbody>
             <tr>
-                <td class="role">🤖 AI/ML Scientist</td>
+                <td class="role">FIELD TRIP</td>
                 <td class="org">
-                    UL Solutions
-                    <img src="./assets/icons/ul.svg" class="footer-icon" alt="LinkedIn"/>
+                    Gia Lai, Viet Nam
                 </td>
-                <td class="year">2025 - Now </td>
+                <td class="year"> March 2025 </td>
             </tr>
             <tr>
-                <td class="role">👨‍🔬 Instructor & Postdoctoral Researcher</td>
+                <td class="role">FIELD TRIP</td>
                 <td class="org">
-                    Duke University
-                    <img src="./assets/icons/duke-devils.svg" class="footer-icon" alt="LinkedIn"/>
+                    Gia Lai, Viet Nam
                 </td>
-                <td class="year">2023 - 2025</td>
+                <td class="year"> March 2024 </td>
             </tr>
             <tr>
-                <td class="role">📈 Research Scientist </td>
+                <td class="role">FIELD TRIP</td>
                 <td class="org">
-                    Amazon
-                    <img src="./assets/icons/amazon.svg" class="footer-icon" alt="LinkedIn"/>
+                    Gia Lai, Viet Nam
                 </td>
-                <td class="year">2022 - 2023</td>
-            </tr>
-            <tr>
-                <td class="role">🔬 Doctoral Researcher</td>
-                <td class="org">
-                    Duke University
-                    <img src="./assets/icons/duke-devils.svg" class="footer-icon" alt="LinkedIn"/>
-                <td class="year">2018 - 2023</td>
-            </tr>
-            <tr>
-                <td class="role">💻 Software Engineer</td>
-                <td class="org">Motorola Solutions
-                    <img src="./assets/icons/motorola.svg" class="footer-icon" alt="LinkedIn"/>
-                </td>
-                <td class="year">2017 - 2018</td>
-            </tr>
-            <tr>
-                <td class="role">🎓 Electrical Engineering Student</td>
-                <td class="org">
-                    California Institute of Technology
-                    <img src="./assets/icons/caltech.svg" class="footer-icon" alt="LinkedIn"/><br>
-                    Rutgers University
-                    <img src="./assets/icons/rutgers.svg" class="footer-icon" alt="LinkedIn"/>
-                </td>
-                <td class="year">2014 - 2017</td>
+                <td class="year"> May 2023 </td>
             </tr>
             </tbody>
         </table>
@@ -206,131 +224,256 @@
         <!-- PROJECTS / MY WORK SECTION -->
         <div id="my-work-section">
             <span class="subheader-text">
-                <span class="myproject">Projects</span>
+                <span class="recent">Recent</span><br>
+                <span class="adventures">Projects</span>
             </span>
             <div class="projects-container">   
                 
                 <div class="project-card">
-                    <img src="./assets/images/project_TAGAN.png" class="project-image">
+                    <img src="./assets/project-img/gialai.jpg" class="project-image">
                     <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Task-Aware Lifelong Learning for GANs</div>
-                        <div class="body-text project-card-text">Improving lifelong learning for GANs with task-aware methods (ICPR 2026).</div>
+                        <div class="subheader-text project-title">Scholarship Initiative in Gia Lai, Viet Nam</div>
+                        <div class="body-text project-card-text">Our goal is to provide monthly scholarships for children in 
+                            Chu Se commune, Gia Lai province of Viet Nam.</div>
                     </div>
-                    <a class="button" href="./project-TAGAN.html">
+                    <a class="button" href="./project-pages/project-gialai.html">
                         <span class="button-text">Read More</span>
                     </a>
                 </div> 
 
-                <div class="project-card">
-                    <img src="./assets/images/project_EBSD.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Generative Models and Bootstrapping for Titanium Alloy Microstructure Analysis</div>
-                        <div class="body-text project-card-text">Applying generative models for Titanium EBSD Analysis (ICPR 2026).</div>
-                    </div>
-                    <a class="button" href="./project-EBSD.html">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>   
+               
+            </div>
+        </div>
 
-                <div class="project-card">
-                    <img src="./assets/images/project_causal-aug.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Counterfactual Data Augmentation with Contrastive Learning</div>
-                        <div class="body-text project-card-text">Augmentation methods for Counterfactual data using Contrastive Learning (UAI 2025).</div>
-                    </div>
-                    <a class="button" href="./project-causal-aug.html">
-                        <span class="button-text">Read More</span>
-                    </a>
+
+        <!-- DONATION SECTION -->
+        <div id="donation-section">
+            <span class="subheader-text">
+                <span class="recent">Donate</span><br>
+                <span class="adventures">Now</span>
+            </span>
+            <div class="body-text">
+                Your support can make a real difference in the lives of disadvantaged children in Vietnam. <br>
+                Find the most convenient way to support our programs and help children thrive.
+            </div>
+
+            <div class="bank-container">
+                <!-- Vietnam Account -->
+                <div class="bank-info">
+                    <p>Back Account in Vietnam</p>
+                    <p class="account-number">104875489916</p>
+                    <p>LE KIM NGAN</p>
+                    <p class="bank-name">VIETINBANK</p>
                 </div>
 
-                <div class="project-card">
-                    <img src="./assets/images/project_practis.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Perceiving Copulas for Multimodal Time Series Forecasting</div>
-                        <div class="body-text project-card-text">Improving time series prediction with copula-based models and perceiver network (WSC 2024).</div>
-                    </div>
-                    <a class="button" href="./project-practis.html">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>    
-
-                <div class="project-card">
-                    <img src="./assets/images/project_CFLSTM.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Open-Domain Dialog Evaluation</div>
-                        <div class="body-text project-card-text">Improving open-domain dialog evaluation system using causal inference models (IWDSD 2023).</div>
-                    </div>
-                    <a class="button" href="./project-CFLSTM.html">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/project_causal.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Transfer Learning for ITE Estimation</div>
-                        <div class="body-text project-card-text">Applying transfer learning for Individual Treatment Effect estimation (UAI 2023).</div>
-                    </div>
-                    <a class="button" target="_blank"href="https://arxiv.org/pdf/2210.00380">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/project_few-shot.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Task Affinity in Few-Shot Learning</div>
-                        <div class="body-text project-card-text">Using maximum bipartite matching to evaluate task affinity in few-shot learning scenarios (ICLR 2022).</div>
-                    </div>
-                    <a class="button" target="_blank"href="https://openreview.net/pdf?id=u2GZOiUTbt">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/project_TAS.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Fisher Task Distance & NAS</div>
-                        <div class="body-text project-card-text">Applying Fisher Task Distance in Neural Architecture Search to improve model selection (IEEE Access 2022).</div>
-                    </div>
-                    <a class="button" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9766163">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/project_TAS2.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Task-Aware NAS (TA-NAS)</div>
-                        <div class="body-text project-card-text">Task-Aware Neural Architecture Search framework for efficient model design (ICASSP 2021).</div>
-                    </div>
-                    <a class="button" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9414412">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/project_TAS3.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Automated ML via Transfer Learning</div>
-                        <div class="body-text project-card-text">Improved automated machine learning by leveraging transfer learning techniques.</div>
-                    </div>
-                    <a class="button" target="_blank" href="https://arxiv.org/pdf/2103.00241">
-                        <span class="button-text">Read More</span>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <img src="./assets/images/project_encoding.png" class="project-image">
-                    <div class="project-card-text-container">
-                        <div class="subheader-text project-title">Supervised Encoding</div>
-                        <div class="body-text project-card-text">Supervised encoding for discrete representation learning (ICASSP 2020).</div>
-                    </div>
-                    <a class="button" target="_blank" href="https://ieeexplore.ieee.org/abstract/document/9054118">
-                        <span class="button-text">Read More</span>
-                    </a>
+                <!-- Germany Account -->
+                <div class="bank-info">
+                    <p>Back Account in Germany</p>
+                    <p class="account-number">DE68501900006000331412</p>
+                    <p>FUTURE FOR ALL e.V.</p>
+                    <p class="bank-name">Frankfurter Volksbank Rhein/Main</p>
+                    <p class="bank-bic">BIC: FFVBDEFFXXX</p>
                 </div>
             </div>
+            <div class="body-text">
+                *Future for All is registered as a nonprofit association in Germany (VR 17294). 
+                Donations to our German bank account are tax-deductible for donors residing in Europe.
+            </p>
+        </div>
+
+        <!-- QA SECTION -->
+        <div id="qa-section">
+            <span class="subheader-text">
+                <span class="myproject">FAQs</span>
+            </span>
+            
+            <div class="body-text">Have questions about our project or how to support us? Check out our FAQs below:</div>
+
+            <!-- Donations and Payment -->
+            <h2 class="faq-section-title">Donations and Payment</h2>
+            <!-- Accordion container -->
+            <div class="accordion">
+                <div class="accordion-item">
+                <button class="accordion-button">What donation forms are available?</button>
+                    <div class="accordion-content">
+                        <p>There are two main ways to donate:</p>
+                        <ol>
+                        <li>Sponsor a specific child long-term. Options for monthly, quarterly, or annual payments are available.</li>
+                        <li>Make a general donation for the project at your convenience without sponsoring a specific child.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">How is the organization funded?</button>
+                    <div class="accordion-content">
+                        <p>We are funded through sponsorships, donations, and fundraising events.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">How can I make payments for sponsorship?</button>
+                    <div class="accordion-content">
+                        <p>Payments can be made via direct bank transfer.</p>
+                        <strong>Account in Vietnam:</strong><br>
+                        104875489916<br>
+                        LE KIM NGAN<br>
+                        VietinBank<br><br>
+                        <strong>Account in Germany:</strong><br>
+                        Name: Future For All e.V.<br>
+                        Bank: Frankfurter Volksbank Rhein/Main<br>
+                        IBAN: DE68501900006000331412<br>
+                        BIC: FFVBDEFFXXX<br><br>
+                        <p>*Please note that donations to our German bank account are tax-deductible for donors residing in Europe.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Are my sponsorship contributions tax-deductible?</button>
+                    <div class="accordion-content">
+                        <p>Yes, as we are registered as a non-profit association in Germany (Registration number: VR 17294), your donation is tax-deductible. This applies only to donors living in Europe and making contributions to our German bank account. Please provide your full address if you would like a donation receipt.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Can I make non-monetary donations?</button>
+                    <div class="accordion-content">
+                        <p>Currently, we only accept monetary donations. However, you can support us by sharing this project to help raise awareness.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">How can I know that the money is used for the correct purpose?</button>
+                    <div class="accordion-content">
+                        <p>All donations made to our bank account are used to support the project. Currently, all donations go directly to the children. A record of our bank transactions is available upon request. We also provide regular updates on the project's progress through our social media channels.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sponsorship Program Details -->
+            <h2 class="faq-section-title">Sponsorship Program Details</h2>
+            <!-- Accordion container -->
+            <div class="accordion">
+                <div class="accordion-item">
+                <button class="accordion-button">What is the process to sponsor a child long-term?</button>
+                    <div class="accordion-content">
+                        <p>There are four steps to sponsor:</p>
+                        <ol>
+                            <li>If you are interested in the sponsorship program, please contact us via Instagram, Facebook or email for further information.</li>
+                            <li>We will send you our program brochure and a list of frequently asked questions, and offer a one-on-one conversation, either in person or online, to discuss our organization and projects in more detail</li>
+                            <li>If you decide to join, we will provide the agreement along with details about a child.</li>
+                            <li>Once you sign the agreement, you will become a sponsor in the scholarship program.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Who can sponsor a child?</button>
+                    <div class="accordion-content">
+                        <p> Sponsorship is open to everyone—individuals, families, companies, and organizations are all welcome to participate. 
+                            You can choose to sponsor one child, or more than one; you and your friends can also sponsor a child as a group, based on your capability.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">How are children selected for sponsorship?</button>
+                    <div class="accordion-content">
+                        <p>Children are selected for the program based on their financial need and academic potential, with guidance from our local partners, 
+                            including schools and the Youth Union which have deep insight into the children’s circumstances and the local community. 
+                            Additionally, parents must commit to ensuring their child completes their education, 
+                            signing an agreement that the child will not drop out of school midway to maintain eligibility for the program.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Can I choose the child I want to sponsor?</button>
+                    <div class="accordion-content">
+                        <p>No, to ensure all disadvantaged children have equal opportunities, we randomly assign a child for you to sponsor.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Will I receive updates about the child I am sponsoring?</button>
+                    <div class="accordion-content">
+                        <p>Yes, you will receive updates once a year, which may include annual reports, photos, or videos.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Can I communicate with the child I am sponsoring?</button>
+                    <div class="accordion-content">
+                        <p>Direct communication is not permitted to protect the child's safety and privacy. 
+                            However, if you wish to send a letter of encouragement, we will facilitate the delivery of your message.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sponsorship Commitment -->
+            <h2 class="faq-section-title">Sponsorship Commitment</h2>
+            <!-- Accordion container -->
+            <div class="accordion">
+                <div class="accordion-item">
+                <button class="accordion-button">Is the sponsorship legally binding?</button>
+                    <div class="accordion-content">
+                        <p> Sponsorship is not legally binding. There are no contractual obligations, and you may cancel at any time, though a minimum commitment of one year is preferred.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">What is the commitment period for sponsoring a child?</button>
+                    <div class="accordion-content">
+                        <p>A minimum commitment of one year is recommended, but sponsors are encouraged to support the child for as long as possible to ensure continuity in their education.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button"> Can a child have multiple sponsors?</button>
+                    <div class="accordion-content">
+                        <p>No, each child will have only one sponsor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ending Sponsorship -->
+            <h2 class="faq-section-title">Ending Sponsorship</h2>
+            <!-- Accordion container -->
+            <div class="accordion">
+                <div class="accordion-item">
+                <button class="accordion-button">What happens if I need to end my sponsorship?</button>
+                    <div class="accordion-content">
+                        <p>If you need to end your sponsorship, please notify us via email at least one month in advance. We will work to find another sponsor to ensure the child's education continues without interruption.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">What happens if the child I sponsor no longer needs support?</button>
+                    <div class="accordion-content">
+                        <p>If the child graduates or no longer needs support, we will inform you via email and provide the option to sponsor another child or end the sponsorship.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Donor Feedback -->
+            <h2 class="faq-section-title">Donor Feedback</h2>
+            <!-- Accordion container -->
+            <div class="accordion">
+                <div class="accordion-item">
+                <button class="accordion-button">How can I share feedback about the scholarship program?</button>
+                    <div class="accordion-content">
+                        <p>You can contact our Donor Relations Team anytime via email. We also offer personal conversations (i.e., in person or online) to discuss your suggestions and ideas in detail if required.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                <button class="accordion-button">Will FFA ask for my feedback proactively?</button>
+                    <div class="accordion-content">
+                        <p>Yes. At the end of every year, FFA will send you a feedback form to evaluate the quality of our services and the impact of the scholarship program. Your feedback is reviewed by our program team and used to improve our processes, reporting, and overall donor experience.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <p class="last-updated">*Last updated: 20/01/2026.</p>
         </div>
     </div>
 
@@ -338,16 +481,16 @@
     <footer id="footer">
         <div class="footer-icons">
             <a class="icon-link" target="_blank" href="https://www.facebook.com/futureforallvn">
-                <img src="./assets/icons/facebook.svg" class="footer-icon" alt="facebook"/>
-            </a>
-            <a class="icon-link" target="_blank" href="https://www.linkedin.com/company/future-for-all-de/">
-                <img src="./assets/icons/linkedin.svg" class="footer-icon" alt="LinkedIn"/>
+                <img src="./assets/icons/facebook-color.svg" class="footer-icon" alt="facebook"/>
             </a>
             <a class="icon-link" target="_blank" href="https://www.instagram.com/futureforall.vn/">
-                <img src="./assets/icons/instagram.svg" class="footer-icon" alt="Instagram"/>
+                <img src="./assets/icons/instagram-color.svg" class="footer-icon" alt="Instagram"/>
+            </a>
+            <a class="icon-link" target="_blank" href="https://www.linkedin.com/company/future-for-all-de/">
+                <img src="./assets/icons/linkedin-color.svg" class="footer-icon" alt="LinkedIn"/>
             </a>
             <a class="icon-link" href="mailto:futureforallvn@gmail.com">
-                <img src="./assets/icons/mail.svg" class="footer-icon" alt="Email"/>
+                <img src="./assets/icons/email-color.svg" class="footer-icon" alt="Email"/>
             </a>
         </div>
 

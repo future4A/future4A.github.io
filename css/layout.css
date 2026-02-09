@@ -10,12 +10,21 @@ html {
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Aesthet Nova";
+  src: url("fonts/AesthetNova-Regular.woff2") format("woff2"),
+        url("fonts/AesthetNova-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* ==========================================
@@ -31,6 +40,25 @@ body {
 /* ==========================================
    Portfolio Header
    ========================================== */
+.nav-title-link {
+    display: flex;
+    align-items: center; /* vertically center logo and text */
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 50px; /* adjust size */
+    margin-left: 5px; /* space between logo and title */
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+
+
 #portfolio-header {
   display: flex;
   gap: 20px;
@@ -85,6 +113,69 @@ body {
   gap: 34px;
 }
 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.team-member {
+  text-align: center;
+  font-family: Aesthet Nova, sans-serif;
+}
+
+.team-member.center {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover; /* keeps portrait nicely cropped */
+  border: 4px solid #eee;
+}
+
+.name {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.role {
+  color: #666;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 14px;
+}
+
+
+.about-image {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
 /* ==========================================
    Projects Section
    ========================================== */
@@ -102,11 +193,11 @@ body {
 
 /* Project Card Styles */
 .project-card {
-  max-width: calc((100% - 32px) / 3);
+  max-width: calc((100% - 32px)/2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -122,7 +213,7 @@ body {
 .project-image {
   width: 80%;
   height: 180px;
-  object-fit: contain; /* show the full image */
+  object-fit: cover; /* ensures the image fills the area without distortion */
   object-position: center; /* center the image */
   display: block;
   border-radius: 12px;
@@ -190,9 +281,241 @@ body {
   width: calc((100% - 16px) / 2);
 }
 
+
+
+
+
+.project-header {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.project-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45); /* dark overlay for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.project-header-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.project-header-overlay p {
+    font-size: 18px;
+    max-width: 700px;
+}
+
+
+
+/* ==========================================
+   Donations Pages
+   ========================================== */
+#donation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bank-container {
+  display: flex;
+  gap: 20px;               /* space between the two accounts */
+  flex-wrap: wrap;          /* stack on smaller screens */
+  justify-content: center;  /* horizontal center if wrapped */
+  align-items: stretch;     /* make cards same height */
+}
+
+.bank-info {
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  line-height: 1.6;
+
+  /* Vertical centering of text inside each card */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+}
+
+.bank-info p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.bank-info p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.bank-info .bank-name {
+  font-weight: bold;
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.bank-info .account-number {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bank-info .bank-bic {
+  font-size: 14px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.bank-info .note {
+  font-size: 12px;
+  color: #777;
+  margin-top: 12px;
+  line-height: 1.4;
+}
+
+
+
+/* ==========================================
+   FAQs Section
+   ========================================== */
+#qa-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#faqs {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+#faqs h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #679DF4;
+}
+
+.last-updated {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+/* Accordion styling */
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.accordion-button {
+  background-color: #20498b;
+  color: #fff;
+  cursor: pointer;
+  padding: 15px 20px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.accordion-button:hover {
+  background-color: #679DF4;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f7f7f7;
+  transition: max-height 0.3s ease;
+  padding: 0 20px;
+}
+
+.accordion-content p,
+.accordion-content ol,
+.accordion-content li {
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+
+
+/* ==========================================
+   Language Switch
+   ========================================== */
+/* Right side container */
+.navbar-right {
+    display: flex;
+    flex-direction: column; /* stack button and language switch */
+    align-items: center; /* center horizontally */
+    gap: 10px; /* space between button and flags */
+}
+
+/* Language flags */
+.lang-switch {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-switch img {
+    width: 28px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-switch img:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.lang-switch a.active img {
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+
+
+
+
+
 /* ==========================================
    Buttons (Grow Right + Background + Icon)
    ========================================== */
+
 a.button {
   display: inline-flex;
   align-items: center;
@@ -202,7 +525,7 @@ a.button {
   padding: 12px 22px;
   border: none;
   border-radius: 50px;
-  background: #000 url("../assets/images/button-bg.jpg") center center / cover no-repeat;
+  background: #000000 url("../assets/images/FUTURE_FOR_ALL_80.jpg") center center / cover no-repeat;
   background-blend-mode: multiply;
   color: #fff !important;
   font-weight: 500;
@@ -238,9 +561,10 @@ a.button span {
 
 /* Sparkle icon */
 a.button::after {
-  content: "🗂️";
+  content: "💖";
   position: absolute;
-  right: 18px;
+  right: 16px;
+  top: 30%;
   transform: translateX(-100px);
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -250,7 +574,7 @@ a.button::after {
 /* Hover effects: expand to the right */
 a.button:hover {
   background-color: transparent;
-  padding-right: 56px; /* grow to the right */
+  padding-right: 50px; /* grow to the right */
   transform: translateX(10px); /* gentle rightward shift */
   border: none; /* ✅ ensure no border appears */
 }
@@ -341,6 +665,7 @@ a.button.get-in-touch::after {
   content: "✨";
   position: absolute;
   right: 16px;
+  top: 30%;
   transform: translateX(-100px);
   opacity: 0;
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -439,18 +764,18 @@ a.button.get-in-touch:focus-visible {
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 16px;
+  gap: 18px;
 }
 
 .footer-icon {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   transition: transform 0.3s ease, filter 0.3s ease;
   transform: translateY(6px); /* move icon 6px lower */
 }
 
 .footer-icon:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 .copyright {
@@ -512,14 +837,14 @@ a.button.get-in-touch:focus-visible {
    Education & Experience Section
 ================================ */
 #education-experience-section {
-  text-align: right;
+  text-align: left;
   font-family: 'Pacifico', cursive;
 }
 
 /* ---------- Title Styling ---------- */
 .subheader-text {
   display: block;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   line-height: 1;
   font-size: 42px;
   font-weight: 400;
@@ -530,7 +855,7 @@ a.button.get-in-touch:focus-visible {
 /* "Recent" Word */
 .subheader-text .recent {
   font-size: 40px;
-  color: #222;
+  color: #679DF4;
   display: block;
   margin-bottom: 0;
 }
@@ -538,10 +863,10 @@ a.button.get-in-touch:focus-visible {
 /* "Adventures" Word */
 .subheader-text .adventures {
   font-size: 60px; /* Emphasis */
-  color: #2a211c;
+  color: #679DF4;
   display: block;
   letter-spacing: 1px;
-  text-shadow: 3px 3px 0 #716d69; /* Retro glow */
+  text-shadow: 3px 3px 0 #a4c5f9; /* Retro glow */
   margin-top: -15px;
 }
 
@@ -668,4 +993,24 @@ a.button.get-in-touch:focus-visible {
 @media (prefers-color-scheme: dark) {
   #footer { color: #e0e0e0; }
   .footer-icon:hover { filter: brightness(2); }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member.center {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 760px) {
+  .bank-container {
+    flex-direction: column;
+  }
+  .bank-info {
+    width: 100%;
+    min-height: auto;
+  }
 }

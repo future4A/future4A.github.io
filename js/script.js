@@ -1,9 +1,3 @@
-if (document.getElementById('my-work-link')) {
-  document.getElementById('my-work-link').addEventListener('click', () => {
-    document.getElementById('my-work-section').scrollIntoView({behavior: "smooth"})
-  })
-}
-
 // Get the button
 const backToTopButton = document.getElementById("back-to-top");
 
@@ -21,6 +15,28 @@ backToTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth"
+  });
+});
+
+
+
+
+// Accordion functionality
+const accordionButtons = document.querySelectorAll('.accordion-button');
+
+accordionButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const content = button.nextElementSibling;
+
+    // Toggle active class for button styling
+    button.classList.toggle('active');
+
+    // Toggle content visibility
+    if (content.style.maxHeight) {
+      content.style.maxHeight = null; // Collapse
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px"; // Expand
+    }
   });
 });
 

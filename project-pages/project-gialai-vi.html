@@ -38,18 +38,31 @@
 	<body>
     <!-- NAVBAR -->
     <div class="navbar">
-        <a class="nav-title-link" href="../index-vi.html">
-        <span class="nav-title">⬅️ Future for All</span>
-        <img src="../assets/images/ffa-logo-fn-09.png" alt="Future for All Logo" class="nav-logo">
-      </a>
 
+        <!-- LEFT SIDE -->
+        <div class="nav-left">
+            <!-- Hamburger -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+
+            <a class="nav-title-link" href="../index.html">
+                <span class="nav-title">Future for All</span>
+                <img src="../assets/images/ffa-logo-fn-09.png" alt="Future for All Logo" class="nav-logo">
+            </a>
+
+            <!-- Collapsible links -->
+            <div class="nav-links" id="navMenu">
+                <a href="../index-vi.html#about-section">Giới Thiệu</a>
+                <a href="../index-vi.html#donation-section">Quyên Góp</a>
+                <a href="../index-vi.html#qa-section">Hỏi & Đáp</a>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE (always visible) -->
         <div class="navbar-right">
-            <!-- Get in touch button -->
             <a class="button get-in-touch" href="mailto:futureforallvn@gmail.com">
                 <span class="button-text">Liên Hệ</span>
             </a>
 
-            <!-- Language Switch BELOW the button -->
             <div class="lang-switch">
                 <a href="project-gialai.html" aria-label="English">
                     <img src="../assets/icons/en.svg" alt="English">
@@ -59,6 +72,7 @@
                 </a>
             </div>
         </div>
+
     </div>
 
     <!-- MAIN PAGE CONTENT -->

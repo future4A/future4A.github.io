@@ -57,6 +57,75 @@ body {
     color: #2c3e50;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;  /* changed from center → top */
+    padding: 12px 20px;
+    position: relative;
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: column;   /* vertical stack */
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.navbar-right {
+    display: flex;
+    flex-direction: column; /* stack items vertically if needed */
+    justify-content: flex-start; /* align items to top */
+    gap: 8px;
+}
+
+
+/* ===== LINKS (desktop) ===== */
+/* vertical links */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#navMenu a {
+    display: inline-block;       /* shrink to text width */
+    position: relative;          /* for ::after positioning */
+    padding: 4px 0;
+    color: #333;
+    text-decoration: none;
+}
+
+/* underline effect from center */
+#navMenu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 50%;                 /* full text width */
+    background-color: currentColor;
+    transform: scaleX(0);        /* start hidden */
+    transform-origin: center;    /* grow from center */
+    transition: transform 0.3s ease;
+}
+
+/* grow underline on hover */
+#navMenu a:hover::after {
+    transform: scaleX(1);        /* fully visible */
+}
+
+/* ===== HAMBURGER ===== */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
 
 
 #portfolio-header {
@@ -1013,4 +1082,36 @@ a.button.get-in-touch:focus-visible {
     width: 100%;
     min-height: auto;
   }
+}
+
+@media (max-width: 768px) {
+
+    /* make header horizontal */
+    .nav-left {
+        flex-direction: row;     /* ← switch to horizontal */
+        align-items: center;
+        gap: 12px;
+    }
+
+    /* show hamburger */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* collapse links */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 10px;
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
 }

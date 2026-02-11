@@ -1085,12 +1085,16 @@ a.button.get-in-touch:focus-visible {
 }
 
 @media (max-width: 768px) {
-
-    /* make header horizontal */
+    .nav-logo {
+        display: none;
+    }
+    
+    /* nav-left horizontal for mobile */
     .nav-left {
-        flex-direction: row;     /* ← switch to horizontal */
+        flex-direction: row;
         align-items: center;
         gap: 12px;
+        position: relative; /* important for absolute positioning of dropdown */
     }
 
     /* show hamburger */
@@ -1098,20 +1102,23 @@ a.button.get-in-touch:focus-visible {
         display: block;
     }
 
-    /* collapse links */
+    /* collapsible links dropdown */
     .nav-links {
         display: none;
+        flex-direction: column;
         position: absolute;
-        top: 60px;
-        left: 10px;
+        top: 40px;      /* adjust this to match hamburger height */
+        left: 0;        /* align exactly under hamburger */
         background: white;
         padding: 12px;
         border-radius: 8px;
         box-shadow: 0 4px 12px rgba(0,0,0,.15);
+        z-index: 1000;
+        width: max-content; /* shrink to fit text */
     }
 
+    /* show when active */
     .nav-links.active {
         display: flex;
-        flex-direction: column;
     }
 }

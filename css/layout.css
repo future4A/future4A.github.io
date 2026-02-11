@@ -1121,4 +1121,9 @@ a.button.get-in-touch:focus-visible {
     .nav-links.active {
         display: flex;
     }
+
+    .portfolio-header-image{
+      margin-top: 18px;
+    }
+
 }
